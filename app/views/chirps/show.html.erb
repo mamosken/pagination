@@ -1,1 +1,1 @@
-<%= render partial: 'chirp', locals:{chirp: @chirp}%>
+<%= render partial: 'chirp', renderer: BootstrapPagination::Rails, class: "pagination", :outer_window => 2, :inner_window => 1, locals:{chirp: @chirp}%>

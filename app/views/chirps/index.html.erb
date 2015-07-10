@@ -1,3 +1,5 @@
+
 <h3>Recent Chirps</h3>
+
 <%= render @chirps %>
-<%= will_paginate @chirps,renderer: BootstrapPagination::Rails %>
+<%= will_paginate @chirps, renderer: BootstrapPagination::Rails, class: "pagination", :outer_window => 2, :inner_window => 1 %>
