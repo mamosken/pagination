@@ -2,7 +2,8 @@ class ChirpsController < ApplicationController
 	before_action :authenticate_user!, except: [:index, :show]
 	
 	def index
-		@chirps = Chirp.all
+		@chirps = Chirp.all.order("created_at DESC").paginate(page: params[:page], per_page: 3)
+
 	end
 
 	def new
